@@ -2,10 +2,14 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"net/http"
+	"strings"
 
 	"upspin.io/client"
 	"upspin.io/config"
 	_ "upspin.io/transports"
+	"upspin.io/upspin"
 )
 
 func main() {
@@ -16,18 +20,22 @@ func main() {
 	}
 	client := client.New(conf)
 
-	_, err = client.Lookup("gildaschbt@gmail.com/p", true)
-	// ds, err := client.Lookup("augie@upspin.io", true)
-	if err != nil {
-		fmt.Println(err)
-	}
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		url := strings.TrimPrefix(r.URL.Path, "/")
+		f, err := client.Open(upspin.PathName(url))
+		if err != nil {
+			fmt.Println(err)
+			http.Error(w, err.Error(), http.StatusNotFound)
+			return
+		}
+		_, err = io.Copy(w, f)
+		if err != nil {
+			fmt.Println(err)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
+		}
+	})
 
-	// fmt.Printf("DirServer: %#v\n", ds)
-
-	b, err := client.Get("gildaschbt@gmail.com/p/index.html")
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	fmt.Println(string(b))
+	fmt.Println("Listening on 8080...")
+	http.ListenAndServe(":8080", nil)
 }
