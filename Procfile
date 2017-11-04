@@ -1,0 +1,1 @@
+web: upspin-viewer

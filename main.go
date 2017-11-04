@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/gildasch/upspin-viewer/anonymous"
@@ -54,6 +55,6 @@ func main() {
 		}
 	})
 
-	fmt.Println("Listening on 8080...")
-	http.ListenAndServe(":8080", nil)
+	fmt.Printf("Listening on %s...\n", os.Getenv("PORT"))
+	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
 }

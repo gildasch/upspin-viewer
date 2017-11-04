@@ -1,0 +1,223 @@
+{
+	"ImportPath": "github.com/gildasch/upspin-viewer",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "1643683e1b54a9e88ad26d98f81400c8c9d9f4f9"
+		},
+		{
+			"ImportPath": "golang.org/x/crypto/hkdf",
+			"Rev": "bd6f299fb381e4c3393d1c4b1f0b94f5e77650c8"
+		},
+		{
+			"ImportPath": "golang.org/x/text/cases",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/tag",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/language",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/runes",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/secure/bidirule",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/secure/precis",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/transform",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/unicode/bidi",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/unicode/norm",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "golang.org/x/text/width",
+			"Rev": "1cbadb444a806fd9430d14ad08967ed91da4fa0a"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "eb3733d160e74a9c7e442f435eb3bea458e1d19f"
+		},
+		{
+			"ImportPath": "upspin.io/access",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/bind",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/cache",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/client",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/client/clientutil",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/client/file",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/config",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/dir/inprocess",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/dir/remote",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/dir/unassigned",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/errors",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/factotum",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/flags",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/key/inprocess",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/key/remote",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/key/sha256key",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/key/transports",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/key/unassigned",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/key/usercache",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/log",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/metric",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/pack",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/pack/ee",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/pack/eeintegrity",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/pack/internal",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/pack/packutil",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/pack/plain",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/path",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/rpc",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/rpc/local",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/serverutil",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/store/inprocess",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/store/remote",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/store/transports",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/store/unassigned",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/transports",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/upspin",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/upspin/proto",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/user",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		},
+		{
+			"ImportPath": "upspin.io/valid",
+			"Rev": "2461d0e14401bc4def54e860e36153369c4e6e09"
+		}
+	]
+}
