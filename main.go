@@ -7,14 +7,52 @@ import (
 	"strings"
 
 	"upspin.io/client"
-	"upspin.io/config"
+	"upspin.io/factotum"
 	_ "upspin.io/transports"
 	"upspin.io/upspin"
 )
 
+const (
+	username = "anonymous@yopmail.com"
+	public   = `p256
+22093798818893024622336269998686442571435612562520865182046305461083477133512
+17797210462092364380982608279430136085800970116434296109768820456901066959334
+`
+	secret = `59547353025968832991402423037620858463955029496026875163089246321869979101175`
+)
+
+var (
+	// from upspin.io/config/initconfig.go
+	defaultPacking     = upspin.EEPack
+	defaultKeyEndpoint = upspin.Endpoint{
+		Transport: upspin.Remote,
+		NetAddr:   "key.upspin.io:443",
+	}
+)
+
+type Config struct {
+	factotum upspin.Factotum
+}
+
+func (Config) UserName() upspin.UserName      { return username }
+func (c *Config) Factotum() upspin.Factotum   { return c.factotum }
+func (Config) Packing() upspin.Packing        { return defaultPacking }
+func (Config) KeyEndpoint() upspin.Endpoint   { return defaultKeyEndpoint }
+func (Config) DirEndpoint() upspin.Endpoint   { return upspin.Endpoint{} }
+func (Config) StoreEndpoint() upspin.Endpoint { return upspin.Endpoint{} }
+func (Config) Value(string) string            { return "" }
+
+func newConfig() (*Config, error) {
+	factotum, err := factotum.NewFromKeys([]byte(public), []byte(secret), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return &Config{factotum: factotum}, nil
+}
+
 func main() {
-	// client := client.New(config.New())
-	conf, err := config.FromFile("/home/gildas/upspin/config.anonymous")
+	conf, err := newConfig()
 	if err != nil {
 		fmt.Println(err)
 	}
