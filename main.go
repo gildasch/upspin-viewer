@@ -55,6 +55,11 @@ func main() {
 		}
 	})
 
-	fmt.Printf("Listening on %s...\n", os.Getenv("PORT"))
-	http.ListenAndServe(":"+os.Getenv("PORT"), nil)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	fmt.Printf("Listening on %s...\n", port)
+	http.ListenAndServe(":"+port, nil)
 }
