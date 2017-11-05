@@ -4,7 +4,7 @@ Serve public content from upspin as HTTP
 
 For example, this image:
 
-![Smaller Augie](https://upspin-viewer.herokuapp.com/augie@upspin.io/Images/Augie/smaller.jpg)
+![Smaller Augie](https://upspin-viewer.herokuapp.com/augie@upspin.io/Images/Augie/smaller.jpg?)
 
 is served from augie@upspin.io's upspin store server!
 
