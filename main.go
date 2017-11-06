@@ -21,6 +21,11 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		url := strings.TrimPrefix(r.URL.Path, "/")
 
+		if url == "" {
+			fmt.Fprintf(w, "<p>Looking for inspiration? Try out <a href='/augie@upspin.io'>augie@upspin.io's account</a></p>")
+			return
+		}
+
 		de, err := client.Lookup(upspin.PathName(url), true)
 		if err != nil {
 			fmt.Println(err)
